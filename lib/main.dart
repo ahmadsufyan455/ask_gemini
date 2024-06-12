@@ -1,5 +1,5 @@
-import 'package:ask_gemini/chat_screen.dart';
-import 'package:ask_gemini/constant.dart';
+import 'package:ask_gemini/screen/chat_screen.dart';
+import 'package:ask_gemini/utils/constant.dart';
 import 'package:flutter/material.dart';
 
 void main() {

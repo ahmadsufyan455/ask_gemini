@@ -1,7 +1,9 @@
-import 'package:ask_gemini/constant.dart';
+import 'package:ask_gemini/widgets/custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
+
+import '../utils/constant.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -101,33 +103,8 @@ class _ChatScreenState extends State<ChatScreen> {
               child: Row(
                 children: [
                   Expanded(
-                    child: TextField(
+                    child: CustomTextfield(
                       controller: _messageController,
-                      style: GoogleFonts.fredoka(),
-                      decoration: InputDecoration(
-                        isDense: true,
-                        hintText: 'Ask gemini...',
-                        hintStyle: GoogleFonts.fredoka(color: greenDark),
-                        enabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
-                            color: greenDark,
-                          ),
-                          borderRadius: BorderRadius.circular(50.0),
-                        ),
-                        disabledBorder: OutlineInputBorder(
-                          borderSide: const BorderSide(
-                            color: greenDark,
-                          ),
-                          borderRadius: BorderRadius.circular(50.0),
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(50.0),
-                          borderSide: const BorderSide(
-                            color: greenDark,
-                            width: 2.0,
-                          ),
-                        ),
-                      ),
                     ),
                   ),
                   const SizedBox(width: 16),
